@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-surface-500;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-surface-800 text-slate-200;
+  }
+
+  /* Refined scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-surface-900; }
+  ::-webkit-scrollbar-thumb { @apply bg-surface-500 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-brand-500; }
+}
+
+@layer components {
+  /* ── Glassmorphism card ──────────────────────────── */
+  .glass {
+    @apply bg-surface-700/60 backdrop-blur-xl border border-surface-500/50
+           shadow-glass rounded-2xl;
+  }
+
+  .glass-hover {
+    @apply glass transition-all duration-300
+           hover:bg-surface-600/60 hover:shadow-card-hover hover:border-brand-500/30
+           hover:-translate-y-1;
+  }
+
+  /* ── Brand gradient text ─────────────────────────── */
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-400 via-glow-purple to-glow-cyan
+           bg-clip-text text-transparent;
+  }
+
+  /* ── Glow accent line (section dividers) ────────── */
+  .glow-line {
+    @apply h-px bg-gradient-to-r from-transparent via-brand-500/60 to-transparent;
+  }
+
+  /* ── Section container ───────────────────────────── */
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* ── Section header label ────────────────────────── */
+  .section-label {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full
+           bg-brand-500/10 border border-brand-500/20
+           text-brand-400 text-xs font-mono font-medium tracking-widest uppercase;
+  }
+
+  /* ── Primary CTA button ──────────────────────────── */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl
+           bg-brand-500 hover:bg-brand-600 text-white font-semibold
+           transition-all duration-200 shadow-glow-brand hover:shadow-none
+           hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  /* ── Outline / secondary button ─────────────────── */
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl
+           border border-surface-500 hover:border-brand-500/50
+           text-slate-300 hover:text-white font-semibold
+           bg-surface-700/40 hover:bg-surface-600/40
+           transition-all duration-200 hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  /* ── Skill progress bar ──────────────────────────── */
+  .skill-bar {
+    @apply h-1.5 rounded-full bg-surface-600 overflow-hidden;
+  }
+
+  .skill-bar-fill {
+    @apply h-full rounded-full transition-all duration-700;
+  }
+
+  /* ── Tag / badge pill ────────────────────────────── */
+  .tag {
+    @apply inline-flex px-2.5 py-0.5 rounded-full text-xs font-medium
+           bg-brand-500/10 text-brand-300 border border-brand-500/20;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Reduced motion — respect user preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
