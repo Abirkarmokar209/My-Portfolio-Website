@@ -107,8 +107,10 @@ async function sendEmailNotification(data: {
   if (!process.env.SMTP_HOST || !process.env.NOTIFY_EMAIL) return;
 
   try {
-    const nodemailer = await import("nodemailer");
-    const transporter = nodemailer.createTransport({
+    const nodemailerMod = await import("nodemailer");
+    // nodemailer v9 ESM-compatible: handle both default and named exports
+    const nm = (nodemailerMod as any).default ?? nodemailerMod;
+    const transporter = nm.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT ?? 587),
       secure: false,
