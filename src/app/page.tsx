@@ -47,9 +47,9 @@ export default function HomePage() {
                 <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold
                                leading-[1.1] tracking-tight mb-6">
                   {/* CHANGE_HERE: Edit headline copy */}
-                  Decoding The <span className="gradient-text">Threat,</span>
+                  Decoding <span className="gradient-text">The Threat,</span>
                   <br />
-                  <span className="gradient-text">Securing</span>The Future,
+                  Securing<span className="gradient-text">The Future,</span>
                   <br />
                   Seamlessly.
                 </h1>

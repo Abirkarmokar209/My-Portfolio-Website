@@ -58,6 +58,11 @@ const nextConfig = {
     /* CHANGE_HERE: Add external image hostnames if you serve project screenshots from a CDN */
     remotePatterns: [
       // Example: { protocol: "https", hostname: "res.cloudinary.com" },
+      {
+        protocol: 'https',
+        hostname: 'i.ibb.co',
+        pathname: '/**',
+      },
     ],
   },
 
