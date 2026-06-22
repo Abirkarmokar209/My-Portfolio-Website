@@ -27,10 +27,10 @@ export const personalInfo = {
   phone: "+8801811239420",
 
   /* CHANGE_HERE: Update path if you rename the file in /public */
-  resumePath: "/src/data/resume.pdf",
+  resumePath: "https://drive.google.com/file/d/1lwULuSFhkxSBo3HOAqBjEqHFxfZd6yNp/view?usp=sharing",
 
   /* CHANGE_HERE: Replace with your profile image path in /public/images/ */
-  profileImage: "/public/images/profile.jpg",
+  profileImage: "https://drive.google.com/file/d/1rUFkkK7IRju7BgV6WLAT9S_D3E7cGoNB/view?usp=sharing",
 };
 
 // ─── SOCIAL LINKS ────────────────────────────────────────────
