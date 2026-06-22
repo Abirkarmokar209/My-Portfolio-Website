@@ -7,47 +7,49 @@
     --radius: 0.75rem;
   }
 
-  * {
-    @apply border-surface-500;
-  }
-
   html {
     @apply scroll-smooth;
   }
 
   body {
-    @apply bg-surface-800 text-slate-200;
+    background-color: #1e1b4b; /* Safe fallback color for dark mode background */
+    color: #e2e8f0;            /* Safe text color slate-200 */
   }
 
   /* Refined scrollbar */
   ::-webkit-scrollbar { width: 6px; }
-  ::-webkit-scrollbar-track { @apply bg-surface-900; }
-  ::-webkit-scrollbar-thumb { @apply bg-surface-500 rounded-full; }
-  ::-webkit-scrollbar-thumb:hover { @apply bg-brand-500; }
+  ::-webkit-scrollbar-track { background: #0f172a; }
+  ::-webkit-scrollbar-thumb { background: #475569; border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { background: #7c3aed; }
 }
 
 @layer components {
   /* ── Glassmorphism card ──────────────────────────── */
   .glass {
-    @apply bg-surface-700/60 backdrop-blur-xl border border-surface-500/50
-           shadow-glass rounded-2xl;
+    @apply border rounded-2xl;
+    background-color: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(24px);
+    border-color: rgba(71, 85, 105, 0.5);
   }
 
   .glass-hover {
-    @apply glass transition-all duration-300
-           hover:bg-surface-600/60 hover:shadow-card-hover hover:border-brand-500/30
-           hover:-translate-y-1;
+    @apply glass transition-all duration-300;
+  }
+  .glass-hover:hover {
+    background-color: rgba(51, 65, 85, 0.6);
+    transform: translateY(-4px);
   }
 
   /* ── Brand gradient text ─────────────────────────── */
   .gradient-text {
-    @apply bg-gradient-to-r from-brand-400 via-glow-purple to-glow-cyan
-           bg-clip-text text-transparent;
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #a78bfa, #c084fc, #22d3ee);
   }
 
   /* ── Glow accent line (section dividers) ────────── */
   .glow-line {
-    @apply h-px bg-gradient-to-r from-transparent via-brand-500/60 to-transparent;
+    @apply h-px;
+    background-image: linear-gradient(to right, transparent, rgba(124, 58, 237, 0.6), transparent);
   }
 
   /* ── Section container ───────────────────────────── */
@@ -57,31 +59,47 @@
 
   /* ── Section header label ────────────────────────── */
   .section-label {
-    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full
-           bg-brand-500/10 border border-brand-500/20
-           text-brand-400 text-xs font-mono font-medium tracking-widest uppercase;
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium tracking-widest uppercase;
+    background-color: rgba(124, 58, 237, 0.1);
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    color: #a78bfa;
   }
 
   /* ── Primary CTA button ──────────────────────────── */
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl
-           bg-brand-500 hover:bg-brand-600 text-white font-semibold
-           transition-all duration-200 shadow-glow-brand hover:shadow-none
-           hover:scale-[1.02] active:scale-[0.98];
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-200;
+    background-color: #7c3aed;
+    color: #ffffff;
+  }
+  .btn-primary:hover {
+    background-color: #6d28d9;
+    transform: scale(1.02);
+  }
+  .btn-primary:active {
+    transform: scale(0.98);
   }
 
   /* ── Outline / secondary button ─────────────────── */
   .btn-outline {
-    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl
-           border border-surface-500 hover:border-brand-500/50
-           text-slate-300 hover:text-white font-semibold
-           bg-surface-700/40 hover:bg-surface-600/40
-           transition-all duration-200 hover:scale-[1.02] active:scale-[0.98];
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-200;
+    border: 1px solid #475569;
+    color: #cbd5e1;
+    background-color: rgba(51, 65, 85, 0.4);
+  }
+  .btn-outline:hover {
+    border-color: rgba(124, 58, 237, 0.5);
+    color: #ffffff;
+    background-color: rgba(71, 85, 105, 0.4);
+    transform: scale(1.02);
+  }
+  .btn-outline:active {
+    transform: scale(0.98);
   }
 
   /* ── Skill progress bar ──────────────────────────── */
   .skill-bar {
-    @apply h-1.5 rounded-full bg-surface-600 overflow-hidden;
+    @apply h-1.5 rounded-full overflow-hidden;
+    background-color: #334155;
   }
 
   .skill-bar-fill {
@@ -90,8 +108,10 @@
 
   /* ── Tag / badge pill ────────────────────────────── */
   .tag {
-    @apply inline-flex px-2.5 py-0.5 rounded-full text-xs font-medium
-           bg-brand-500/10 text-brand-300 border border-brand-500/20;
+    @apply inline-flex px-2.5 py-0.5 rounded-full text-xs font-medium border;
+    background-color: rgba(124, 58, 237, 0.1); 
+    color: #a78bfa;                             
+    border-color: rgba(124, 58, 237, 0.2);     
   }
 }
 
@@ -100,7 +120,6 @@
     text-wrap: balance;
   }
 
-  /* Reduced motion — respect user preferences */
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: 0.01ms !important;

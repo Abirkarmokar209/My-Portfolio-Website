@@ -62,7 +62,8 @@ export async function submitContactForm(
   };
 
   // ── 3. Extract client IP for audit trail ─────────────────
-  const headersList = headers();
+  // FIXED BELOW: Added 'await' for Next.js 15 async headers compatibility
+  const headersList = await headers();
   const ipAddress =
     headersList.get("x-forwarded-for")?.split(",")[0]?.trim() ??
     headersList.get("x-real-ip") ??
@@ -96,7 +97,7 @@ export async function submitContactForm(
 /**
  * Optional email notification on new contact submission.
  * /* CHANGE_HERE: Configure SMTP credentials in .env.local:
- *    SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, NOTIFY_EMAIL
+ * SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, NOTIFY_EMAIL
  */
 async function sendEmailNotification(data: {
   name: string;
