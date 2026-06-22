@@ -47,11 +47,11 @@ export default function HomePage() {
                 <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold
                                leading-[1.1] tracking-tight mb-6">
                   {/* CHANGE_HERE: Edit headline copy */}
-                  Building the web
+                  Decoding The <span className="gradient-text">Threat,</span>
                   <br />
-                  <span className="gradient-text">fast, secure,</span>
+                  <span className="gradient-text">Securing</span>The Future,
                   <br />
-                  beautifully.
+                  Seamlessly.
                 </h1>
               </FadeIn>
 

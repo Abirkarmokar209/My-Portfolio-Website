@@ -27,10 +27,10 @@ export const personalInfo = {
   phone: "+8801811239420",
 
   /* CHANGE_HERE: Update path if you rename the file in /public */
-  resumePath: "/resume.pdf",
+  resumePath: "/src/data/resume.pdf",
 
   /* CHANGE_HERE: Replace with your profile image path in /public/images/ */
-  profileImage: "/images/profile.jpeg",
+  profileImage: "/public/images/profile.jpg",
 };
 
 // ─── SOCIAL LINKS ────────────────────────────────────────────
