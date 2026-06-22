@@ -31,7 +31,7 @@ export const personalInfo = {
 //https://ibb.co.com/KxWyb9GW
 //https://ibb.co.com/VcFK02X5
   /* CHANGE_HERE: Replace with your profile image path in /public/images/ */
-  profileImage: "https://ibb.co.com/VcFK02X5",
+  profileImage: "https://i.ibb.co.com/wh46BKL4/Whats-App-Image-2026-04-10-AM.jpg",
 };
 
 // ─── SOCIAL LINKS ────────────────────────────────────────────
