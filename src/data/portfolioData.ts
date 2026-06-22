@@ -30,7 +30,7 @@ export const personalInfo = {
   resumePath: "/resume.pdf",
 
   /* CHANGE_HERE: Replace with your profile image path in /public/images/ */
-  profileImage: "/images/profile.jpg",
+  profileImage: "/images/profile.jpeg",
 };
 
 // ─── SOCIAL LINKS ────────────────────────────────────────────
@@ -38,13 +38,13 @@ export const socialLinks = [
   {
     label: "GitHub",
     /* CHANGE_HERE: Replace with your GitHub profile URL */
-    url: "https://github.com/yourusername",
+    url: "https://github.com/Abirkarmokar209",
     icon: "github",
   },
   {
     label: "LinkedIn",
     /* CHANGE_HERE: Replace with your LinkedIn profile URL */
-    url: "https://linkedin.com/in/yourprofile",
+    url: "https://www.linkedin.com/in/abirkarmokar/",
     icon: "linkedin",
   },
   {
@@ -59,19 +59,18 @@ export const socialLinks = [
 export const aboutBio = {
   /* CHANGE_HERE: Replace with your professional bio paragraphs */
   paragraphs: [
-    "With over 6 years building production systems at scale, I specialize in React/Next.js frontends paired with battle-tested Node.js or Go backends. My work sits at the intersection of performance engineering and application security.",
-    "Before going independent, I led frontend infrastructure at a Series B fintech startup, reducing bundle sizes by 60% and eliminating critical XSS vectors across a 200k-user platform. I hold certifications in AWS Solutions Architecture and Offensive Security.",
-    "Outside the terminal, I contribute to open-source security tooling, write about web performance on my blog, and mentor junior engineers through local coding bootcamps.",
+    "Equipped with intensive bootcamp training and hands-on project experience, I specialize in transforming raw data into actionable security insights.",
+    "My foundational expertise lies at the intersection of data engineering and security analytics, where I build data pipelines, analyze system logs, and identify potential threat vectors. Through rigorous academic and practical projects, I have developed a strong command of data manipulation, threat modeling, and vulnerability assessment methodologies.",
+    "A proactive problem-solver and aspiring engineer, I am dedicated to leveraging data analytics to fortify infrastructure and drive data-backed security decisions."
   ],
 
   /* CHANGE_HERE: Replace with your career milestones */
   milestones: [
-    { year: "2024", event: "Led security audit for 3 SaaS platforms — zero CVEs post-launch" },
-    { year: "2023", event: "Launched open-source rate-limiter used by 1,200+ projects" },
-    { year: "2022", event: "Promoted to Senior Engineer at FinFlow Inc." },
-    { year: "2021", event: "Completed OSCP certification" },
-    { year: "2019", event: "First production Next.js app — 98 Lighthouse score at launch" },
-  ],
+    { year: "2026", event: "Appointed Student Associate at Cyber Security Centre, Daffodil International University " },
+    { year: "2026", event: "Completed advanced AI and Machine Learning bootcamp training" },
+    { year: "2025", event: "Completed intensive Full-Stack Web Development bootcamp at Programming Hero" },
+    { year: "2022", event: "Started working as a freelance web developer across Upwork, Fiverr, and Freelancer.com" },
+  ]
 };
 
 // ─── SKILLS ──────────────────────────────────────────────────
