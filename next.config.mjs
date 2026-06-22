@@ -3,7 +3,7 @@
 /**
  * Content Security Policy & Security Headers
  * These protect against XSS, clickjacking, MIME sniffing, and other common attacks.
- * /* CHANGE_HERE: Adjust CSP directives if you embed third-party scripts (e.g. analytics, fonts) */
+ * CHANGE_HERE: Adjust CSP directives if you embed third-party scripts (e.g. analytics, fonts)
  */
 const ContentSecurityPolicy = `
   default-src 'self';
@@ -75,4 +75,5 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: false },
 };
 
-module.exports = nextConfig;
+// Fixed the export line below:
+export default nextConfig;
