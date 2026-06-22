@@ -28,9 +28,10 @@ export const personalInfo = {
 
   /* CHANGE_HERE: Update path if you rename the file in /public */
   resumePath: "https://drive.google.com/file/d/1lwULuSFhkxSBo3HOAqBjEqHFxfZd6yNp/view?usp=sharing",
-
+//https://ibb.co.com/KxWyb9GW
+//https://ibb.co.com/VcFK02X5
   /* CHANGE_HERE: Replace with your profile image path in /public/images/ */
-  profileImage: "https://drive.google.com/file/d/1rUFkkK7IRju7BgV6WLAT9S_D3E7cGoNB/view?usp=sharing",
+  profileImage: "https://ibb.co.com/VcFK02X5",
 };
 
 // ─── SOCIAL LINKS ────────────────────────────────────────────
