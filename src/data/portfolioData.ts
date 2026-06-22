@@ -8,23 +8,23 @@
 // ─── PERSONAL INFO ───────────────────────────────────────────
 export const personalInfo = {
   /* CHANGE_HERE: Replace with your full name */
-  name: "Alex Morgan",
+  name: "Abir Karmokar",
 
   /* CHANGE_HERE: Replace with your professional title/tagline */
-  title: "Full-Stack Engineer & Security Architect",
+  title: "Data Analyst & Security Analytics Engineer",
 
   /* CHANGE_HERE: Replace with a 1-2 sentence professional summary */
   summary:
-    "I build fast, secure, and elegant web systems — from pixel-perfect interfaces to hardened backend infrastructure. Obsessed with performance, clean code, and zero-trust principles.",
+    "I uncover insights that drive business growth and detect threats that compromise security—from clean visualizations to forensic log analysis. Obsessed with data integrity, anomaly detection, and proactive defense.",
 
   /* CHANGE_HERE: Replace with your location */
-  location: "San Francisco, CA",
+  location: "Dhaka, Bangladesh",
 
   /* CHANGE_HERE: Replace with your work email */
-  email: "alex@example.com",
+  email: "abirkarmokar209@gmail.com",
 
   /* CHANGE_HERE: Replace with your phone number or remove the key */
-  phone: "+1 (555) 000-0000",
+  phone: "+8801811239420",
 
   /* CHANGE_HERE: Update path if you rename the file in /public */
   resumePath: "/resume.pdf",
